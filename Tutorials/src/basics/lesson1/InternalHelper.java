@@ -1,4 +1,4 @@
-package basics.lesson1;
+package src.basics.lesson1;
 
 // No 'public' keyword → this top-level class is package-private (default access)
 class InternalHelper {

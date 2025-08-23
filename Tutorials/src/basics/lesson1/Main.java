@@ -1,4 +1,4 @@
-package basics.lesson1;
+package src.basics.lesson1;
 public class Main {
     public static void main(String[] args) {
         User u = new User("Ashutosh");

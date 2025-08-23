@@ -1,4 +1,4 @@
-package basics.lesson1;
+package src.basics.lesson1;
 public class User {
     private final String name; // private + final (immutable field)
 
