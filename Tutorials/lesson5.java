@@ -6,7 +6,7 @@ public class lesson5 {
         System.out.println("=== Encapsulation Example ===");
 
         // Creating an object of class Car
-        Car car = new Car("Red", "Toyota", 2022);
+        Car car = new Car("Red", "Toyota", 2022, 100, "Honda");
 
         System.out.println("--- Original Car Info ---");
 
