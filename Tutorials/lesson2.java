@@ -12,7 +12,10 @@ public class lesson2 {
         double d = 6.0d; // 8 bytes = 64 bits, Range: 4.9E-324 to 1.7976931348623157E308 (-1.7^308*10 to
                          // 1.7^308*10-1)
         char c = '7'; // 2 bytes = 16 bits, Range: 0 to 65,535
-        boolean bl = true;// 1 byte = 8 bits, Range: true or false
+        boolean bl = true;// 1 bit = 8 bits, Range: true or false
+
+        char ch = 65; //Using ASCII values
+        System.out.println("Char: " + ch);
 
         System.out.printf("Byte: %d\nShort: %d\nInt: %d\nLong: %d\nFloat: %f\nDouble: %f\nChar: %c\nBoolean: %b\n", b,
                 s, i, l, f, d, c, bl);
@@ -23,19 +26,27 @@ public class lesson2 {
 
         int x = 10;
         double y = x; // Implicit Type Casting
+        // Definition of Implicit Type Casting: converting a value of one data type to another(smaller to larger datatype)
+        // No loss of data, no overflow, no precision loss
 
         System.out.printf("Int: %d\nDouble: %f\n", x, y);
 
         double z = 20.5;
         int w = (int) z; // Explicit Type Casting
+        // Definition of Explicit Type Casting: converting a value of one data type to another(larger to smaller datatype)
+        // May lose precision, may result in loss of data, may result in overflow
+        // Example of Data Loss : 
+        double a = 2066.5;
+        int etp = (int) a;
+        System.out.println(etp);
 
         System.out.printf("Double: %f\nInt: %d\n", z, w);
 
         // Final Keyword in Java (constants)
+        // Definition: A final variable cannot be changed. It is a constant variable
 
         final double pi = 3.14;
 
         System.out.println("Pi: " + pi);
-
     }
 }
