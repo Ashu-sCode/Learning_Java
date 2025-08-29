@@ -15,7 +15,7 @@ public class RockPaperScisor {
         System.out.println("You chose: " + userChoice);
         System.out.println("Computer chose: " + computerChoice);
 
-     if(userChoice.equals(computeChoice)) {
+     if(userChoice.equals(computerChoice)) {
         System.out.println("It's a tie!");
      } else if (userChoice.equals("Rock") && computerChoice.equals("Scissor")) {
         System.out.println("You win!");
