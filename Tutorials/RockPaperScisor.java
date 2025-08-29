@@ -10,7 +10,7 @@ public class RockPaperScisor {
         String[] choices = { "Rock", "Paper", "Scissor" };
         Random random = new Random();
         int computerChoiceIndex = random.nextInt(choices.length);
-        String computerChoice = choices[computerChoiceIndex];
+        tring computerChoice = choices[computerChoiceIndex];
 
         System.out.println("You chose: " + userChoice);
         System.out.println("Computer chose: " + computerChoice);
