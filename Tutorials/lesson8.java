@@ -11,7 +11,7 @@ public class lesson8 {
         s2.draw();
 
         System.out.printf("\nExplanation:\n"
-                + "1. The 'Shape' class is ABSTRACT (cannot be instantiated).\n"
+                + "1 The 'Shape' class is ABSTRACT (cannot be instantiated).\n"
                 + "   - It has an abstract method: draw().\n"
                 + "   - It has a concrete method: setColor().\n"
                 + "2. The 'Circle' and 'Rectangle' classes extend 'Shape'.\n"
