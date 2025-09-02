@@ -5,7 +5,7 @@ public class lesson8 {
         shape s2 = new Rectangle();
 
         s1.setColor("Red");
-        s1.dra();
+        s1.draw();
 
         s2.setColor("Blue");
         s2.draw();
