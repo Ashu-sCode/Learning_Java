@@ -11,7 +11,7 @@ public class Car {
         this.color = color;
         this.model = model;
         this.brand = brand;
-        this.year = year;
+        this.year = year
         this.speed = speed;
     }
 
