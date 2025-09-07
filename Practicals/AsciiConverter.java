@@ -26,7 +26,7 @@ public class AsciiConverter {
     }
 
     public AsciiConverter() {
-        buildUI();
+        buildUI()
     }
 
     private void buildUI() {
