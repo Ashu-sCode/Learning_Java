@@ -12,7 +12,7 @@ public class Car {
         this.model = model;
         this.brand = brand;
         this.year = year;
-        this.speed = speed;
+        this.speed = speed
     }
 
     // getter method (to access private variables safely)
