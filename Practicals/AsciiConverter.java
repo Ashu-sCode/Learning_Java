@@ -9,7 +9,7 @@ import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileWriter;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList
+import java.util.ArrayList;
 import java.util.List;
 
 public class AsciiConverter {
