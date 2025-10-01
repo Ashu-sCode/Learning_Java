@@ -1,64 +1,74 @@
+package gui;
+
 import java.awt.*;
 import java.awt.event.*;
 
-public class LoginApp extends Frame implements ActionListener {
-    TextField username, password;
-    Button loginBtn;
+public class LoginApp {
 
-    LoginApp() {
-        // Frame settings
-        setLayout(new FlowLayout());
-        setSize(300, 200);
-        setTitle("Login App");
+    // Constructor to build GUI
+    public LoginApp() {
+        // Create Frame (window)
+        Frame frame = new Frame("Login App");
 
-        // Username field
+        // Create Labels
         Label userLabel = new Label("Username:");
-        username = new TextField(15);
+        userLabel.setBounds(50, 80, 80, 30);
 
-        // Password field
         Label passLabel = new Label("Password:");
-        password = new TextField(15);
-        password.setEchoChar('*');
+        passLabel.setBounds(50, 130, 80, 30);
 
-        // Login button
-        loginBtn = new Button("Login");
+        // Create TextFields
+        TextField userText = new TextField();
+        userText.setBounds(150, 80, 150, 30);
 
-        // Add components
-        add(userLabel);
-        add(username);
-        add(passLabel);
-        add(password);
-        add(loginBtn);
+        TextField passText = new TextField();
+        passText.setBounds(150, 130, 150, 30);
+        passText.setEchoChar('*'); // hide password input
 
-        // Action Listener for Login button
-        loginBtn.addActionListener(this);
+        // Create Button
+        Button loginBtn = new Button("Login");
+        loginBtn.setBounds(150, 180, 80, 30);
 
-        // Trigger login when ENTER is pressed in password field
-        password.addActionListener(this);
+        // Create Label for result
+        Label resultLabel = new Label("");
+        resultLabel.setBounds(50, 230, 250, 30);
 
-        setVisible(true);
+        // Add ActionListener to button
+        loginBtn.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String username = userText.getText();
+                String password = passText.getText();
 
-        // Window close
-        addWindowListener(new WindowAdapter() {
+                if (username.equals("admin") && password.equals("1234")) {
+                    resultLabel.setText("✅ Login Successful!");
+                } else {
+                    resultLabel.setText("❌ Invalid Credentials");
+                }
+            }
+        });
+
+        // Add components to frame
+        frame.add(userLabel);
+        frame.add(passLabel);
+        frame.add(userText);
+        frame.add(passText);
+        frame.add(loginBtn);
+        frame.add(resultLabel);
+
+        // Frame properties
+        frame.setSize(400, 300);
+        frame.setLayout(null); // absolute positioning
+        frame.setVisible(true);
+
+        // Close window properly
+        frame.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent we) {
-                System.exit(0);
+                frame.dispose();
             }
         });
     }
 
-    // When login is triggered
-    public void actionPerformed(ActionEvent e) {
-        String user = username.getText();
-        String pass = password.getText();
-
-        if (user.equals("admin") && pass.equals("123")) {
-            System.out.println("Login Successful!");
-        } else {
-            System.out.println("Invalid Credentials!");
-        }
-    }
-
     public static void main(String[] args) {
-        new LoginApp();
+        new LoginApp(); // Run the app
     }
 }
