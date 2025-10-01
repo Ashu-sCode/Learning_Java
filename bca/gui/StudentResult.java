@@ -42,6 +42,9 @@ public class StudentResult {
         Button gdButton = new Button("Grade");
         gdButton.setBounds(390, 180, 60, 30);
 
+        Button clearBtn = new Button("Clear");
+        clearBtn.setBounds(410, 50, 60, 30);
+
         TextArea resultArea = new TextArea();
         resultArea.setBounds(50, 230, 400, 120);
 
@@ -92,7 +95,7 @@ public class StudentResult {
 
                     }
                     float perc = (total / 500.0f) * 100;
-                    resultArea.setText("Percentage for " + name + "Roll No: " + roll + "\n"
+                    resultArea.setText("Percentage for " + name + " Roll No: " + roll + "\n"
                             + " is " + perc + "\n"
 
                     );
@@ -136,7 +139,7 @@ public class StudentResult {
                     } else {
                         grade = "F";
                     }
-                    resultArea.setText("Grade for " + name + "Roll No: " + roll + "\n"
+                    resultArea.setText("Grade for " + name + " Roll No: " + roll + "\n"
                             + " is " + grade + "\n"
 
                     );
@@ -151,6 +154,22 @@ public class StudentResult {
 
         });
 
+        // clear
+        clearBtn.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+
+                nameField.setText("");
+                rollField.setText("");
+                for (TextField tf : marksFields) {
+                    tf.setText("");
+                }
+                resultArea.setText("");
+
+            }
+
+        });
+
         frame.add(nameLabel);
         frame.add(nameField);
         frame.add(rollLabel);
@@ -159,6 +178,7 @@ public class StudentResult {
         frame.add(totalBtn);
         frame.add(percBtn);
         frame.add(gdButton);
+        frame.add(clearBtn);
         frame.add(resultArea);
 
         frame.setVisible(true);
