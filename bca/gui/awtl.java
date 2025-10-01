@@ -25,11 +25,7 @@ public class awtl {
     });    
     }
 
-   
-    
-
-
- public static void main(String[] args) {
+      public static void main(String[] args) {
         awtl obj = new awtl();
 
     }
